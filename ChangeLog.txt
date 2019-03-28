@@ -7,7 +7,7 @@
 - removed support for TeXLive 2014
 - removed support for MiKTeX 2.8
 - updated to MiKTeX 2.9 build 7021
-- updated to Python 3.7.3
+- updated to Python 2.7.16
 - updated to ImageMagick 7.0.8-27
 - updated to Ghostscript 9.26
 - updated to NSIS 3.0.4
