@@ -58,3 +58,6 @@ ManifestDPIAware true
 # Output file
 
 Outfile "${SETUP_EXE}"
+
+# sign the installer executable
+!finalize 'signing.bat ${SETUP_EXE}'
