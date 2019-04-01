@@ -1,6 +1,7 @@
 ﻿Changelog for LyX-232-1:
 - installs LyX 2.3.2
-- since this installer now there is no longer the need to update MiKTeX
+- there is no longer the need to update MiKTeX during the installation of LyX
+- add digital signature to the installer executable
 - new dictionary for Georgian
 - updated thesaurus for Ukrainian
 - updated spell checker dictionaries for English, Turkmen and Ukrainian
