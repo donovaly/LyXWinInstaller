@@ -41,6 +41,7 @@ Configuration of LyX installer
 # Names and version
 
 !define APP_NAME "LyX"
+!define APP_NAME_SMALL "lyx"
 !define APP_VERSION_NUMBER "${APP_VERSION_MAJOR}.${APP_VERSION_MINOR}.${APP_VERSION_REVISION}.${APP_VERSION_BUILD}"
 # for the proposed install folder we use the scheme "LyX 2.2" while we need for the registry the scheme "LyX 2.1.4"
 # to check if it is exactly this version (to support side by side installations)
@@ -62,8 +63,8 @@ Configuration of LyX installer
   !define APP_SETUPTYPE "Bundle"
 !endif
 
-!define APP_RUN "bin\lyx.exe"
-!define BIN_LYX "lyx.exe"
+!define BIN_LYX "${APP_NAME_SMALL}.exe"
+!define APP_RUN "bin\${BIN_LYX}"
 
 !define APP_REGKEY "Software\${APP_NAME}${APP_SERIES_KEY}" # like "LyX220"
 !define APP_REGKEY_SETUP "${APP_REGKEY}\Setup"
@@ -71,8 +72,8 @@ Configuration of LyX installer
 
 !define APP_REGNAME_DOC "${APP_NAME}.Document"
 
-!define APP_EXT ".lyx"
-!define APP_MIME_TYPE "application/lyx"
+!define APP_EXT ".${APP_NAME_SMALL}"
+!define APP_MIME_TYPE "application/${APP_NAME_SMALL}"
 
 !define APP_UNINST_KEY "Software\Microsoft\Windows\CurrentVersion\Uninstall\${SETUP_UNINSTALLER_KEY}"
 
@@ -89,7 +90,7 @@ Configuration of LyX installer
   !define BUNDLESETUP_LATEX
 !endif
 
-!define SETUP_ICON "${FILES_ICONS}\lyx.ico"
+!define SETUP_ICON "${FILES_ICONS}\${APP_NAME_SMALL}.ico"
 !define SETUP_HEADERIMAGE "graphics\header.bmp"
 !define SETUP_WIZARDIMAGE "graphics\wizard.bmp"
 !define SETUP_UNINSTALLER "Uninstall-${APP_NAME}.exe"

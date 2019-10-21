@@ -15,7 +15,7 @@ SetCompressor /SOLID lzma
 
 !define APP_VERSION_MAJOR 2
 !define APP_VERSION_MINOR 3
-!define APP_VERSION_REVISION 2
+!define APP_VERSION_REVISION 3
 !define APP_VERSION_EMERGENCY "" # use "1" for an emergency release of LyX otherwise ""
 !define APP_EMERGENCY_DOT "" # use "." for an emergency release of LyX otherwise ""
 !define APP_VERSION_BUILD 1 # Start with 1 for the installer releases of each version
@@ -47,8 +47,8 @@ SetCompressor /SOLID lzma
 # !!! you need to adjust them to the folders in your Windows system !!!
 
 !define FILES_LYX "D:\LyXPackage2.3\LyX"
-!define FILES_DEPS "D:\LyXGit\Master\lyx-windows-deps-msvc2015"
-!define FILES_QT "C:\Qt\Qt5.9.7\5.9.7\msvc2015"
+!define FILES_DEPS "D:\LyXGit\Master\lyx-windows-deps-msvc2017"
+!define FILES_QT "C:\Qt\Qt5.12.5\5.12.5\msvc2017"
 !define ClassFileDir "${FILES_LYX}\Resources\tex"
 !define DVIPostFileDir "${FILES_DEPS}\tex"
 
@@ -62,5 +62,5 @@ SetCompressor /SOLID lzma
  
 # definitions for the Complete installer
 !if ${SETUPTYPE} == BUNDLE
- !define MiKTeXInstall "$INSTDIR\external\basic-miktex-2.9.7021.exe"
+ !define MiKTeXInstall "$INSTDIR\external\basic-miktex-2.9.7219-x64.exe"
 !endif

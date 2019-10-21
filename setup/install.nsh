@@ -18,7 +18,7 @@ Section -ProgramFiles SecProgramFiles
   # be installed directly to C:\programs - the uninstaller will then delete the whole
   # C:\programs directory
   StrCpy $String $INSTDIR
-  StrCpy $Search "LyX"
+  StrCpy $Search "${APP_NAME}"
   Call StrPoint # function from LyXUtils.nsh
   ${if} $Pointer == "-1"
    StrCpy $INSTDIR "$INSTDIR\${APP_DIR}"
@@ -61,6 +61,8 @@ Section -ProgramFiles SecProgramFiles
   !insertmacro FileListQtIconengines File "${FILES_QT}\plugins\iconengines\"
   SetOutPath "$INSTDIR\bin\platforms"
   !insertmacro FileListQtPlatforms File "${FILES_QT}\plugins\platforms\"
+  SetOutPath "$INSTDIR\bin\styles"
+  !insertmacro FileListQtStyles File "${FILES_QT}\plugins\styles\
   
   # Resources
   SetOutPath "$INSTDIR"
@@ -90,7 +92,7 @@ Section -ProgramFiles SecProgramFiles
    WriteRegStr SHCTX "Software\Classes\Python.File" "OnlyWithLyX" "Yes${APP_SERIES_KEY}" # special entry to test if they were registered by this LyX version
   ${endif}
   
-  # Compile all Pyton files to byte-code
+  # Compile all Python files to byte-code
   # The user using the scripts may not have write access
   FileOpen $PythonCompileFile "$INSTDIR\compilepy.py" w
   FileWrite $PythonCompileFile "import compileall$\r$\n"

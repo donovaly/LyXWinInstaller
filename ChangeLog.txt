@@ -1,4 +1,12 @@
-﻿Changelog for LyX-232-1:
+﻿Changelog for LyX-233-1:
+- fixes a registry issue when installing LyX 2.3.x over an existing LyX 2.3.x
+- installs LyX 2.3.3
+- updated to MiKTeX 2.9 build 7219, 64bit
+- updated to Python 2.7.17
+- updated to Ghostscript 9.50
+
+
+Changelog for LyX-232-1:
 - installs LyX 2.3.2
 - there is no longer the need to update MiKTeX during the installation of LyX
 - add digital signature to the installer executable
